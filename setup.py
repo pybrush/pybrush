@@ -1,18 +1,26 @@
-from setuptools import setup
+from setuptools import setup, find_packages
+
 setup(
-    name='pybrush',
-    license='MIT License',
-    packages=['pybrush'],
-    install_requires=['numpy', 'scipy'],
-    extras_require={'tests': ['pytest', 'pytest-mpl']},
-    py_modules=['pybrush'],
-    version='0.5.2',  # note to self: also update the one is the source!
-    description='A Python Machine Unlearning Framework.',
-    author='Snehil Kumar',
-    author_email='snehil03july@gmail.com',
-    url='https://github.com/pybrush/pybrush',
-    #download_url='https://github.com/pybrush/pybrush',
-    keywords=['machine unlearning', 'forget', 'privacy', 'data science', 'ai', 'python',
-              'numpy'],
-    classifiers=[]
+    name="pybrush",
+    version="0.1.0",
+    author="Snehil",
+    author_email="pybrush@gmail.com",
+    description="A Python library for Machine Unlearning",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/pybrush/pybrush",
+    packages=find_packages(),
+    install_requires=[
+        "numpy",
+        "scipy",
+        "torch",
+        "tensorflow",
+        "scikit-learn"
+    ],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.7",
 )
